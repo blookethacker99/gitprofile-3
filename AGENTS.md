@@ -28,3 +28,13 @@ It is read by `vite.config.ts`, not by the React app, so a change to it only tak
 
 | Path                                  | What lives there                                                 |
 | ------------------------------------- | ---------------------------------------------------------------- |
+| `gitprofile.config.ts`                | All user-facing configuration                                    |
+| `src/components/gitprofile.tsx`       | Root component; GitHub API calls and data fetching               |
+| `src/components/*/`                   | One folder per portfolio section (avatar, skills, experience, …) |
+| `src/interfaces/sanitized-config.tsx` | The config schema, as TypeScript interfaces                      |
+| `src/utils/index.tsx`                 | `getSanitizedConfig()` — applies defaults and validates config   |
+| `src/constants/default-themes.tsx`    | The list of selectable themes                                    |
+| `src/assets/index.css`                | Tailwind and daisyUI setup, plus custom themes                   |
+
+## Themes
+

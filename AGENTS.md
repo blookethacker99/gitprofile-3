@@ -18,3 +18,13 @@ Most people arrive here by forking the repo and deploying it to GitHub Pages. As
 
 `base` must match the deployment target, or the site builds fine and then loads without CSS or JavaScript:
 
+- Deploying to `https://<USERNAME>.github.io` → `base: '/'`
+- Deploying to `https://<USERNAME>.github.io/<REPO_NAME>` → `base: '/<REPO_NAME>/'` (leading and trailing slash)
+- Deploying to Vercel, Netlify or a custom domain → `base: '/'`
+
+It is read by `vite.config.ts`, not by the React app, so a change to it only takes effect on rebuild. Note that `base` is deliberately absent from the `SanitizedConfig` interface for this reason.
+
+## Layout
+
+| Path                                  | What lives there                                                 |
+| ------------------------------------- | ---------------------------------------------------------------- |

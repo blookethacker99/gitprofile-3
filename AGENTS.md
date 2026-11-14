@@ -38,3 +38,13 @@ It is read by `vite.config.ts`, not by the React app, so a change to it only tak
 
 ## Themes
 
+There are 36 themes: 35 from daisyUI plus one custom theme, `procyon`.
+
+The selectable list lives in `themeConfig.themes` in `gitprofile.config.ts`; removing an entry takes it out of the dropdown. Custom themes are defined as `@plugin "daisyui/theme"` blocks in `src/assets/index.css` — `procyon` is the worked example to copy.
+
+If you add or remove a theme, update the count in `README.md`, which states it in two places.
+
+## Adding a config option
+
+Changing the shape of the config means touching four places, in this order:
+
